@@ -16,7 +16,7 @@
         </li>
         {{ end }}
 
-        {{ with $.Site.GetPage "section" . }}
+        {{ with $.Site.GetPage . }}
         <li>
             <a href="{{ .RelPermalink }}" class="marked">
                 See more

@@ -1,42 +1,50 @@
 baseURL = 'https://www.jecs.me/'
-languageCode = 'en-us'
+locale = 'en-US'
 title = '~'
+
+[module]
+  [module.hugoVersion]
+    min = '0.169.0'
+
+[security]
+  # Org content is authored in this repository; keep raw HTML content disabled.
+  allowContent = ['! ^text/html$']
 
 [params]
   mainSections = ['posts', 'experience']
 
-  [[author]]
+  [[params.author]]
     name = "Joshua Carrasco Sousa"
     email = "mail@jecs.me"
 
 [taxonomies]
   tag = 'tags'
 
-[menu]
-  [[menu.nav]]
+[menus]
+  [[menus.nav]]
   identifier = "home"
   name = "Home"
   url = "/"
   weight = 1
   # pre denotes the icon from https://feathericons.com/
-  # see layouts/partials/header.html
+  # see layouts/_partials/header.html
   pre = "home"
 
-  [[menu.nav]]
+  [[menus.nav]]
   identifier = "posts"
   name = "Posts"
   url = "/posts"
   weight = 2
   pre = "book"
 
-  [[menu.nav]]
+  [[menus.nav]]
   identifier = "tags"
   name = "Tags"
   url = "/tags"
   weight = 3
   pre = "tag"
 
-  [[menu.nav]]
+  [[menus.nav]]
   identifier = "rss"
   name = "RSS"
   url = "/posts/index.xml"

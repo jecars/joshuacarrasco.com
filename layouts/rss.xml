@@ -3,7 +3,7 @@
     <title>{{ substr (printf "jecs:%s%s" site.Title .RelPermalink) 0 -1}}</title>
     <link>{{- .Permalink -}}index.xml</link>
     <description>Recent content from {{ .Permalink -}}</description>
-    <language>{{ site.Language.LanguageCode }}</language>
+    <language>{{ site.Language.Locale }}</language>
     
     {{- with .OutputFormats.Get "RSS" }}
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
